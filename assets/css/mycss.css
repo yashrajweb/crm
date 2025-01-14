@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Success Alert Styles */
+.alert-box {
+    display: none; /* Hidden by default */
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Icon Styles */
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.checkmark {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #28a745;
+    position: relative;
+    animation: popIn 0.4s ease-out;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: drawCheck 0.4s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #155724;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes drawCheck {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+}
