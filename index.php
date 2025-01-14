@@ -215,7 +215,9 @@ if (!isset($_SESSION['user_id'])) {
             </div>
         </div>
         <!-- Left Sidebar End -->
-
+        <div class="row">
+            <h1>This is created by Yashraj</h1>
+        </div>
 
 
         <!-- ============================================================== -->
